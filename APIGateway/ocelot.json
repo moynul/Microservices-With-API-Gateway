@@ -1,0 +1,84 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56897
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceA",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ServiceA",
+      "SwaggerKey": "ServiceA",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 2
+      },
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "DownstreamPathTemplate": "/api/values",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56900
+        }
+      ],
+      "UpstreamPathTemplate": "/ServiceB",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ServiceB",
+      "SwaggerKey": "ServiceB",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 2
+      },
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "ServiceA",
+        "ServiceB"
+      ],
+      "UpstreamPathTemplate": "/ServiceAAndServiceB",
+      "Aggregator": "MyAggregator"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "ServiceA",
+      "Config": [
+        {
+          "Name": "ServiceA API",
+          "Version": "v1",
+          "Url": "http://localhost:56897/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "ServiceB",
+      "Config": [
+        {
+          "Name": "ServiceB API",
+          "Version": "v1",
+          "Url": "http://localhost:56900/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:56873/"
+  }
+}
+

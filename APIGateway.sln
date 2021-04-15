@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{E419DDA7-F6E6-4B4E-85D5-D410F250AF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceA", "ServiceA\ServiceA.csproj", "{55B0CDD1-D61C-4B38-A5A6-D2B20AC87046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceB", "ServiceB\ServiceB.csproj", "{9227EFF0-72A2-4062-B85F-CA31AFACD456}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E419DDA7-F6E6-4B4E-85D5-D410F250AF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E419DDA7-F6E6-4B4E-85D5-D410F250AF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E419DDA7-F6E6-4B4E-85D5-D410F250AF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E419DDA7-F6E6-4B4E-85D5-D410F250AF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B0CDD1-D61C-4B38-A5A6-D2B20AC87046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B0CDD1-D61C-4B38-A5A6-D2B20AC87046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B0CDD1-D61C-4B38-A5A6-D2B20AC87046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B0CDD1-D61C-4B38-A5A6-D2B20AC87046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9227EFF0-72A2-4062-B85F-CA31AFACD456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9227EFF0-72A2-4062-B85F-CA31AFACD456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9227EFF0-72A2-4062-B85F-CA31AFACD456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9227EFF0-72A2-4062-B85F-CA31AFACD456}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {491BEFA9-B387-4DD5-AE30-4B267E523BF6}
+	EndGlobalSection
+EndGlobal
